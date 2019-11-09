@@ -1,9 +1,0 @@
-$ git remote add origin https://github.com/diogo20eng/cPMS2019G6git$ git remote -vorigin https://github.com/diogo20eng/PMS2019G6.github.io (fetch)
-origin https://github.com/diogo20eng/PMS2019G6.github.io (push)$ git push origin masterCounting objects: 58, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (57/57), done.
-Writing objects: 100% (58/58), 962.02 KiB | 0 bytes/s, done.
-Total 58 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), done.
-To https://github.com/diogo20eng/PMS2019G6.github.io.git
-* [new branch]      master -> master

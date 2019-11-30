@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, shrink-to-fit=no">
+    <meta name="description" content="Salvar o mundo da burocracia por software simples, eficaz e eficiente">      
+    <title>Bem vindo ao site que vai salvar o mundo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">PMS2019</h1>
+          </div>
+          <div id="logo">
+              <img src="./img/logo.png">
+          </div>
+          <nav class="navbar navbar-expand-sm navbar-light" style="margin-bottom: 100px;">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="tarefas.html">Tarefas</a></li>
+                    <li class="current"><a href="diagramas.html">Diagramas</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><a href="login.php" title="Login"> Login</li>
+                  </li>    
+                </ul>
+              </div>  
+            </nav>
+      </header>
+
+      <section>
+          <div class="container" style="margin-top: 140px;">
+              <div class="dark_dig">
+                <h1>
+                  Introdução<br>
+                </h1>
+                <h2>
+                    <br>
+                    Para este segundo Sprint, foi decidido utilizar uma abordagem Incremental em vez de uma
+                    abordagem Big Design Upfront, visto que pretendemos melhorar o projeto a cada Sprint, pois,
+                    a nosso ver é mais vantajoso.<br>
+                    Neste Sprint, foi-nos proposta a realização de vários diagramas, de forma a podermos representar
+                    de diversas maneiras o problemas sugerido. Utilizou-se, então, os diagramas de classes, diagramas
+                    de casos de utilização, diagramas de máquina de estados e, diagrama de sequência.
+                </h2>
+      </section>
+
+      <section>
+        <div class="container" style="margin-top: 140px;">
+          <div class="dark_dig">
+              <h1>Diagrama de casos de utilização</h1>
+            
+            
+                <img src= "./img/Diagrama_casos_util.png" width="50%" height="50%">
+                <h2>
+                    Casos de Utilização<br>
+
+                    <br>1. Gerir portofólio de projetos - Empresa<br>
+                    2. Responsável pelo projeto - Líder<br>
+                    3. Responsável por cada fase do projeto - Gestor<br>
+                    4. Paga o projeto - Sponsor<br>
+                    5. Beneficiar do produto - Cliente<br>
+                    6. Motivar Equipa - Líder<br>
+                    7. Concluir projeto - Líder<br>
+                    8. Arquivar projeto - Líder<br>
+                    9. Suspender comunicações externas - Líder<br>
+                    10. Suspender custos - Líder<br>
+                    11. Suspender tarefas de um projeto - Líder<br>
+                    12. Criar Projeto - Líder<br>
+                    13. Criar fases do prjeto - Líder<br>
+                    14. Escolher gestor - Líder<br>
+                    15. Faz pedido alteração - Cliente<br>
+                    16. Editar campo do âmbito - Gestor<br>
+                    17. Estabelecer prioridade da tarefa - project manager<br>
+                    18. Determina pessoas da equipa de risco - Gestor<br>
+                    19. Adicionar estimativa de esforço - Implementador<br>
+                    20. Tornar estimativas visiveis - Gestor<br>
+                    21. Adicionar tempo de contigência - Gestor<br>
+                    22. Pré-seleciona implementadores - Gestor<br>
+                    23. Indicar grau de confiança - Gestor<br>
+                    24. Indicar data especifica - Gestor<br>
+                    25. Dar feedback - Cliente<br>
+                    26. Orientar equipa - Líder<br>
+                    27. Inspirar equipa - Líder<br>
+                    28. Reabrir projeto - Líder <br>
+                    29. Relembrar projeto - Líder<br>
+                    30. Suspender projeto - Líder<br>
+                  
+                  
+                  <br>Utilizámos 13 dos nossos 30 casos de utilização para a realização deste diagrama.
+                  Estes casos foram os escolhidos, por acharmos que estes seriam mais relevantes para o trabalho desenvolvido.
+                  <br>A implementação deste diagrama, bem como, a escolha dos casos, deram-nos algumas dificuldades
+                  posteriormente resolvidas.<br>
+
+                  
+                </h2>
+              </div>
+            </div>
+      </section>
+
+      <section>
+          <div class="container" style="margin-top: 140px;">
+            <div class="dark_dig">
+                <h1>Diagrama de classes</h1>
+              
+                  <img src= "./img/diagrama_classes.png" width="70%" height="70%">
+                <h2>
+                  Com este diagrama, pretendíamos representar as classes que considerámos mais importantes deste trabalho,
+                  bem como as suas relações.<br> 
+                  Assim sendo, definimos como as classes principais, as seguintes: <br>
+                  Projeto<br>
+                  Líder<br>
+                  Sponsor<br>
+                  Gestor<br>
+                  Cliente<br>
+                  Fases<br>
+                  Tarefas<br>
+                  Pessoas<br>
+                  Lista_dependencia<br>
+                  Equipa<br>
+                  Equipa_risco<br>
+                  Representante_cliente<br>
+                  <br>Neste diagrama, podemos observar que foram usadas associações de um para um e, de um para muitos
+                  temos, também herança, agregações partilhadas e composições.
+                </h2>
+              </div>
+            </div>
+
+      </section>
+      
+      
+        <section>
+            <div class="container" style="margin-top: 140px;">
+                <div class="dark_dig">
+                    <h1>Diagrama de Máquina de Estados</h1>
+                      <img src= "./img/Diagrama_maq_estados.png" width="70%" height="70%">
+                    <h2>
+                      Com este diagrama, pretendíamos, representar os vários estados no processo de criação de um
+                      projeto. Este pode ser Iniciado, Concluído, Arquivado e/ou Suspenso.
+                      Aquando, do estado, "Em Execução", pode passar ao estado "Concluído", se for terminado o
+                      desenvolvimento. Caso o Líder assim o decida, pode ser reaberto o projeto, passando, novamente ao estado
+                      "Em Execução".<br>
+                      Caso, o Líder decida arquivar, este passa para o estado "Arquivado".<br>
+                      Caso, existam atrasos no pagamento ou conflitos, este passará ao estado "Suspenso", passando
+                      pelos estados "Custos Suspenso" ou "Comunicação Suspensa", respetivamente.
+                    </h2>
+                  </div>
+              </div>
+        </section>   
+
+        <section>
+          <div class="container" style="margin-top: 140px;">
+                  <div class="dark_dig">
+                    <h1>Diagrama de sequências - Dar Feedback</h1>
+                      <img src= "./img/Diagrama_seq_feed.png" width="70%" height="70%">
+                      <h2>
+                        <br>Com este diagrama, pretendíamos representar o caso de utilização "Dar Feedback", numa lifeline.<br>
+                        Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
+                        tipo de diagramas, visto que existem relações entre "Clientes", "Sistema" e "Empresa".
+                      </h2>
+                  </div>
+              </div>
+        </section>   
+
+
+        <section>
+          <div class="container" style="margin-top: 140px;">
+                  <div class="dark_dig">
+                    <h1>Diagrama de sequências - Criar Projeto</h1>
+                      <img src= "./img/Diagrama_seq_cproj.png" width="60%" height="60%">
+                      <h2>
+                          <br>Com este diagrama, pretendíamos representar o caso de utilização "Criar Projeto", numa lifeline.<br>
+                          Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
+                          tipo de diagramas, visto que existem relações entre "Líder", "Sistema" e "Empresa".
+                        </h2>
+                  </div>
+              </div>
+    </section>   
+
+
+    <section>
+      <div class="container" style="margin-top: 140px;">
+              <div class="dark_dig">
+                <h1>Diagrama de sequências - Fazer Pedido Alteração</h1>
+                  <img src= "./img/Diagrama_seq_palt.png" width="70%" height="70%">
+                  <h2>
+                      <br>Com este diagrama, pretendíamos representar o caso de utilização "Fazer Pedido Alteração", numa lifeline.<br>
+                      Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
+                      tipo de diagramas, visto que existem relações entre "Clientes", "Sistema" e "Empresa".
+                    </h2>
+              </div>
+          </div>
+      </section>
+
+
+    <section>
+        <div class="container" style="margin-top: 140px;">
+            <div class="dark_dig">
+              <h1>
+                Conclusão<br>
+              </h1>
+              <h2>
+                  <br>
+                  Com a elaboração deste segundo Sprint, adquirímos uma maior prática no que toca à realização
+                  dos diagramas de casos de utilização, diagramas de classes, diagramas de máquina de estados
+                  e diagramas de sequência.<br>
+                  Para o próximo Sprint, tencionamos melhorar o que for necessário, como por exemplo, termos um maior
+                  número de casos de utilização, maior número de diagramas devido à falta de profundidade na análise
+                  do problema proposto.<br>
+                  Outro aspeto que pretendemos melhorar é a página de login que, de momento, não está completamente
+                  funcional e, pretendemos que assim o seja.
+              </h2>
+    </section>
+
+      <footer id="obj">
+        <div class="container">
+            <h1>Para mais informações contacte-nos  <br> através das nossas páginas de Facebook</h1>
+            <a href="https://www.facebook.com/tiago.miguel.3152"> Tiago Baptista</a> <br>
+            <a href="https://www.facebook.com/guilherme.freitas.395454"> Guilherme Freitas</a><br>
+            <a href="https://www.facebook.com/diogojmferreira"> Diogo Ferreira</a><br>
+            <a href="https://www.facebook.com/tomas.marcos.12"> Tomás Marques</a><br>
+            <a href="https://www.facebook.com/joni.pereira.39"> Jóni Pereira</a>
+        </div>
+    </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  </body>
+
+</html>

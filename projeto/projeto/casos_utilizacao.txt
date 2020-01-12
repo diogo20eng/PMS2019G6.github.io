@@ -1,0 +1,32 @@
+Casos de Utilização
+
+1. Gerir portofólio de projetos - Empresa
+2. Responsável pelo projeto - Líder
+3. Responsável por cada fase do projeto - Gestor
+4. Paga o projeto - Sponsor
+5. Beneficiar do produto - Cliente
+6. Motivar Equipa - Líder
+7. Concluir projeto - Líder
+8. Arquivar projeto - Líder
+9. Suspender comunicações externas - Líder
+10. Suspender custos - Líder
+11. Suspender tarefas de um projeto - Líder
+12. Criar Projeto - Líder
+13. Criar fases do prjeto - Líder
+14. Escolher gestor - Líder
+15. Faz pedido alteração - Cliente
+16. Editar campo do âmbito - Gestor
+17. Estabelecer prioridade da tarefa - project manager
+18. Determina pessoas da equipa de risco - Gestor
+19. Adicionar estimativa de esforço - Implementador
+20. Tornar estimativas visiveis - Gestor
+21. Adicionar tempo de contigência - Gestor
+22. Pré-seleciona implementadores - Gestor
+23. Indicar grau de confiança - Gestor
+24. Indicar data especifica - Gestor
+25. Dar feedback - Cliente
+26. Orientar equipa - Líder
+27. Inspirar equipa - Líder
+28. Reabrir projeto - Líder 
+29. Relembrar projeto - Líder
+30. Suspender projeto - Líder

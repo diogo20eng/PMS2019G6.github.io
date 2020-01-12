@@ -51,10 +51,34 @@
                     Para este segundo Sprint, foi decidido utilizar uma abordagem Incremental em vez de uma
                     abordagem Big Design Upfront, visto que pretendemos melhorar o projeto a cada Sprint, pois,
                     a nosso ver é mais vantajoso.<br>
+                    Outro dos factores que nos levou a escolher esta abordagem foi o facto de num Big Design Upfront realizarmos o 
+                    trabalho na totalidade e, se for necessário alterar uma pequena parte, requer rever todo o projeto. Assim sendo,
+                    optando por uma aboradgem Incremental, conseguimos prevenir esses problemas que nos podiam prejudicar no futuro.
+                    <br>
                     Neste Sprint, foi-nos proposta a realização de vários diagramas, de forma a podermos representar
                     de diversas maneiras o problemas sugerido. Utilizou-se, então, os diagramas de classes, diagramas
                     de casos de utilização, diagramas de máquina de estados e, diagrama de sequência.
                 </h2>
+                <h1>
+                  Base de dados<br>
+                </h1>
+                <h2>
+                  A nosso ver, a base de dados temporal deveria ser implementada já neste sprint, visto que os logins 
+                  foram já implementados, e ao implementá-la nesta fase, podemos trabalhá-la continuamente até o último sprint.
+                  Na nossa opinião é preferível ir trabalhando aos poucos e ir implementando o que é necessário conforme vão sendo
+                   requeridos, do que no fim, onde já sabemos que ocorrem imprevistos e podem atrasar a entrega do Projeto, pondo 
+                   em causa custos e recursos. A utilização da base de dados temporal apenas no último sprint pode também, 
+                   criar uma perda de trabalho enorme na medida em que quando esta for implementada pode ser necessário alterar 
+                   muito do trabalho já realizado, isto leva imenso tempo, pois é necessária a verificação de todo o projeto para 
+                   saber aquilo que deve ser mudado e, muitas das vezes,  ocorrem vários erros nas alterações feitas no trabalho.<br>
+                  Ao nível da base de dados escolhida, pensámos na base de dados MariaDB, visto que suporta tabelas de dados
+                   temporal, sob a forma de tabelas System-Versioning. Estas tabelas guardam o histórico de todas as alterações, 
+                   não apenas de dados, o que permite verificações de alterações, bem como reaver dados na base de dados 
+                   independentemente do tempo passado.
+
+                </h2>
+
+
       </section>
 
       <section>
@@ -63,7 +87,7 @@
               <h1>Diagrama de casos de utilização</h1>
             
             
-                <img src= "./img/Diagrama_casos_util.png" width="50%" height="50%">
+                <img src= "./img/diagrama_casos_de_util.png" width="50%" height="50%">
                 <h2>
                     Casos de Utilização<br>
 
@@ -101,6 +125,11 @@
                   
                   <br>Utilizámos 13 dos nossos 30 casos de utilização para a realização deste diagrama.
                   Estes casos foram os escolhidos, por acharmos que estes seriam mais relevantes para o trabalho desenvolvido.
+                  <br>No âmbito do projeto, estes casos de utilização seriam os mais propícios a realizar o diagrama de acordo com o que 
+                  nos foi proposto pelo enunciado. De referir, ainda, que numa das reuniões foi-nos esclarecido a escolha destes casos 
+                  de utilização.
+                  <br>A entidade "Empresa", como demonstrado no diagrama, representa um ator abstrato. Desta forma, os atores que estão 
+                  a ele associados, irão herdar todos os atributos do ator "Empresa", neste caso "Gerir portofólio".
                   <br>A implementação deste diagrama, bem como, a escolha dos casos, deram-nos algumas dificuldades
                   posteriormente resolvidas.<br>
 
@@ -125,12 +154,11 @@
                   Sponsor<br>
                   Gestor<br>
                   Cliente<br>
-                  Fases<br>
-                  Tarefas<br>
-                  Pessoas<br>
-                  Lista_dependencia<br>
+                  Tarefa<br>
+                  Pessoa<br>
+                  Dependência<br>
                   Equipa<br>
-                  Equipa_risco<br>
+                  Risco<br>
                   Representante_cliente<br>
                   <br>Neste diagrama, podemos observar que foram usadas associações de um para um e, de um para muitos
                   temos, também herança, agregações partilhadas e composições.
@@ -154,7 +182,8 @@
                       "Em Execução".<br>
                       Caso, o Líder decida arquivar, este passa para o estado "Arquivado".<br>
                       Caso, existam atrasos no pagamento ou conflitos, este passará ao estado "Suspenso", passando
-                      pelos estados "Custos Suspenso" ou "Comunicação Suspensa", respetivamente.
+                      pelos estados "Custos Suspenso" ou "Comunicação Suspensa", respetivamente.<br>
+                      Estando no estado "Suspenso", o líder poderá tirar a suspensão e este passará novamente ao estado "Em execução".
                     </h2>
                   </div>
               </div>
@@ -168,7 +197,9 @@
                       <h2>
                         <br>Com este diagrama, pretendíamos representar o caso de utilização "Dar Feedback", numa lifeline.<br>
                         Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
-                        tipo de diagramas, visto que existem relações entre "Clientes", "Sistema" e "Empresa".
+                        tipo de diagramas, visto que existem relações entre "Clientes", "Sistema" e "Empresa".<br>
+                        O ator "Empresa" aqui referido, poderá ser associado a um responsável que tratará de ser o contacto 
+                        na Empresa com o cliente.
                       </h2>
                   </div>
               </div>
@@ -183,7 +214,12 @@
                       <h2>
                           <br>Com este diagrama, pretendíamos representar o caso de utilização "Criar Projeto", numa lifeline.<br>
                           Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
-                          tipo de diagramas, visto que existem relações entre "Líder", "Sistema" e "Empresa".
+                          tipo de diagramas, visto que existem relações entre "Líder", "Sistema" e "Empresa".<br>
+                          O ator "Empresa" aqui referido, poderá ser associado à entidade mais alta no diagrama, ou seja, a 
+                          gerência.<br>
+                          Resumindo, a "Empresa" decide quando criar o projeto, dando autorização ao "Líder" para o criar.
+                          Consequentemente, o Líder pode criar o número de fases necessárias para o projeto. Para cada fase, 
+                          o "Líder" escolhe um gestor.
                         </h2>
                   </div>
               </div>
@@ -199,9 +235,30 @@
                       <br>Com este diagrama, pretendíamos representar o caso de utilização "Fazer Pedido Alteração", numa lifeline.<br>
                       Utilizamos este caso de utilização devido ao facto de ser um dos mais adequados a este
                       tipo de diagramas, visto que existem relações entre "Clientes", "Sistema" e "Empresa".
+                      <br>O ator "Empresa" aqui referido, poderá ser associado a um responsável que tratará de ser o contacto 
+                      na Empresa com o cliente.<br>
+                      O "Cliente" faz um pedido que é inserido no "Sistema", e então o responsável na "Empresa" tratará de fazer a sua
+                      alteração. Esta pode ser, criar novo projeto ou então adicionar uma nova fase a um projeto.<br>
+                      Por fim, o responsável manda mensagem ao "Cliente" dando informação de que esta foi alterada.
                     </h2>
               </div>
           </div>
+      </section>
+
+      <section>
+        <div class="container" style="margin-top: 140px;">
+          <div class="dark_dig">
+            <h1>Diagrama máquina de estados - Defect </h1>
+              <img src= "./img/diagrama_defect.jpeg" width="70%" height="70%">
+              <h2>
+                  <br>Com este diagrama, pretendíamos representar os vários estados da vida de um Defect. Este pode 
+                  ser "Criado", "Avaliado", "Fixed", "Desconsiderado", "Error" e "Bug".<br>
+                  Quando este é criado, é-lhe associado uma tarefa passando ao estado "Avaliado". Este pode passar ao 
+                  estado "Fixed", se for corrigido o problema. Poderá passar ao estado "Desconsiderado" se for decidido que
+                  era um Problema anterior, ou ao estado "Bug" ou "Error" se for decidido ser um Problema de código.
+                </h2>
+          </div>
+      </div>
       </section>
 
 
@@ -220,7 +277,13 @@
                   número de casos de utilização, maior número de diagramas devido à falta de profundidade na análise
                   do problema proposto.<br>
                   Outro aspeto que pretendemos melhorar é a página de login que, de momento, não está completamente
-                  funcional e, pretendemos que assim o seja.
+                  funcional e, pretendemos que assim o seja.<br>
+                  <br> Conseguimos concluir que a implementação de uma base de dados temporal tem muitas
+                   vantagens, não só na verificação de todas as alterações ao longo do tempo, como também a 
+                   reconstrução do estado dos dados a qualquer momento no passado, o cálculo de tendências 
+                   ao longo do tempo, a mantença de uma dimensão que muda lentamente para aplicações de 
+                   suporte à decisão e a recuperação de alterações que foram feitas acidentalmente.
+
               </h2>
     </section>
 
@@ -230,7 +293,7 @@
             <a href="https://www.facebook.com/tiago.miguel.3152"> Tiago Baptista</a> <br>
             <a href="https://www.facebook.com/guilherme.freitas.395454"> Guilherme Freitas</a><br>
             <a href="https://www.facebook.com/diogojmferreira"> Diogo Ferreira</a><br>
-            <a href="https://www.facebook.com/tomas.marcos.12"> Tomás Marques</a><br>
+            <a href="https://www.facebook.com/tomas.marcos.12"> Tomás Marcos</a><br>
             <a href="https://www.facebook.com/joni.pereira.39"> Jóni Pereira</a>
         </div>
     </footer>
